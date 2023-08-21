@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     nut \
     nut-client \
     nut-server \
+    gettext-base \
  && rm -rf /var/lib/apt/lists/* \
  && apt-get clean \
  && mkdir /template
