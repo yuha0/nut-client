@@ -9,10 +9,11 @@ RUN apt-get update && apt-get install -y \
     nut-client \
     nut-server \
  && rm -rf /var/lib/apt/lists/* \
- && apt-get clean
+ && apt-get clean \
+ && mkdir /template
 
-COPY nut.conf ups.conf upsd.users /template
-COPY entrypoint.sh /entrypoint.sh
+COPY nut.conf ups.conf upsd.users /template/
+COPY entrypoint.sh /
 
 # Default environment variables
 ENV NUT_CLIENT_NAME=usbhid-ups \
