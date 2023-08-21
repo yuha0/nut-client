@@ -20,4 +20,4 @@ ENV NUT_CLIENT_NAME=usbhid-ups \
     NUT_CLIENT_DESC="A usbhid compatible UPS"
 
 ENTRYPOINT ["/entrypoint.sh"]
-ENTRYPOINT ["upsd", "-D", "-u", "root"]
+CMD ["upsd", "-D", "-u", "root"]
