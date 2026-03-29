@@ -2,8 +2,6 @@ FROM docker.io/debian:12-slim
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-ARG NUT_EXPORTER_VERSION=3.0.0
-
 RUN apt-get update && apt-get install -y \
     nut \
     nut-client \
